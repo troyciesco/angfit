@@ -1,0 +1,22 @@
+<!-- <h1>My Products</h1>
+<p>{{ productName }}</p>
+<input *ngIf="!isDisabled" type="text" [(ngModel)]="productName" />
+<button *ngIf="!isDisabled" (click)="onAddProduct()" [disabled]="isDisabled">
+  Add Product
+</button>
+<app-product
+  *ngFor="let product of products"
+  [productName]="product"
+  (productClicked)="onRemoveProduct(product)"
+></app-product> -->
+<h1>My Products</h1>
+<form (ngSubmit)="onAddProduct(f)" #f="ngForm">
+  <input type="text" ngModel name="productName" required />
+  <button mat-raised-button color="primary" type="submit">
+    Add Product<mat-icon>home</mat-icon>
+  </button>
+</form>
+<app-product
+  *ngFor="let product of products"
+  [productName]="product"
+></app-product>

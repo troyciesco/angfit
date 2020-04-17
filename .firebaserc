@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "angfit-tmc": {
+      "hosting": {
+        "angfit": [
+          "angfit-tmc"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "angfit-tmc"
+  }
+}
